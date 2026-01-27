@@ -136,7 +136,7 @@ const ResumeBuilder = () => {
             </div>
 
             {/* Section 1: Personal Info */}
-            <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 space-y-6">
+            <div className="p-8 rounded-4xl bg-white/5 border border-white/10 space-y-6">
               <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400"><User size={18} /> Basic Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <InputField label="Name" value={name} onChange={setName} />
