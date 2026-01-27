@@ -107,7 +107,7 @@ const Hero = () => {
             <Star size={14} fill="currentColor" /> 100% FREE & SECURE
           </div>
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Convert Text to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Ultra PDF</span>
+            Convert Text to <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-500">Ultra PDF</span>
           </h1>
         </motion.div>
 
@@ -127,7 +127,7 @@ const Hero = () => {
             <button 
               onClick={handleDownload}
               disabled={isGenerating}
-              className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95 disabled:opacity-50"
+              className="w-full py-4 px-6 bg-linear-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95 disabled:opacity-50"
             >
               {isGenerating ? "Processing..." : <><Download size={20} /> Download Ultra PDF</>}
             </button>
