@@ -147,14 +147,14 @@ const ResumeBuilder = () => {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-widest flex items-center gap-2"><AlignLeft size={14}/> Executive Summary</label>
                 <textarea 
-                   className="w-full bg-white/5 border border-white/10 rounded-xl p-4 min-h-[100px] outline-none focus:border-purple-500 transition-all resize-none"
+                   className="w-full bg-white/5 border border-white/10 rounded-xl p-4 min-h-25 outline-none focus:border-purple-500 transition-all resize-none"
                    value={summary} onChange={(e) => setSummary(e.target.value)}
                 />
               </div>
             </div>
 
             {/* Section 2: Skills */}
-            <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 space-y-6">
+            <div className="p-8 rounded-4xl bg-white/5 border border-white/10 space-y-6">
               <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400"><Code size={18} /> Core Competencies</h3>
               <InputField label="Skills (Comma separated)" value={skills} onChange={setSkills} />
             </div>
@@ -191,7 +191,7 @@ const ResumeBuilder = () => {
           </div>
 
           {/* RIGHT: LIVE PREVIEW */}
-          <div className="lg:w-[450px] sticky top-32 h-fit">
+          <div className="lg:w-112.5 sticky top-32 h-fit">
             <div className="mb-4 flex justify-between px-4"><span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest flex items-center gap-2"><Eye size={14}/> Live Blueprint</span></div>
             <div className="bg-white text-black aspect-[1/1.414] rounded-xl shadow-2xl p-8 overflow-y-auto text-[9px] scale-100 origin-top">
                <div className="border-b-2 border-purple-600 pb-3 mb-4">
@@ -250,7 +250,7 @@ const InputField = ({ label, value, onChange }: any) => (
 );
 
 const DynamicSection = ({ title, icon, items, onAdd, onRemove, renderInputs }: any) => (
-  <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 space-y-6">
+  <div className="p-8 rounded-4xl bg-white/5 border border-white/10 space-y-6">
     <div className="flex justify-between items-center">
       <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400">{icon} {title}</h3>
       <button onClick={onAdd} className="p-2 bg-purple-600 rounded-full hover:bg-purple-500 transition-all"><Plus size={16} /></button>
