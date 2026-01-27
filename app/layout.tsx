@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "PDFHub – All-in-One PDF Tools",
     description:
       "Convert, edit, merge, and manage PDF files online with PDFHub. Simple, fast, and secure PDF solutions.",
-    url: "https://pdf.hub.vercel.app",
+    url: "https://pdfhubx.vercel.app",
     siteName: "PDFHub",
     type: "website",
   },

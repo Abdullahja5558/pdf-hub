@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: 'https://pdf.hub.vercel.app',
+      url: 'https://pdfhubx.vercel.app',
       lastModified: new Date(),
     },
   ]
