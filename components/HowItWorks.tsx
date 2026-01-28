@@ -9,19 +9,19 @@ const steps = [
     title: "Draft Content",
     desc: "Input your text with simple formatting codes for headings and lists.",
     icon: <Type size={28} />,
-    color: "#a855f7", // Purple
+    color: "#a855f7", 
   },
   {
     title: "AI Styling",
     desc: "Our engine applies premium typography and vector-perfect spacing.",
     icon: <Sparkles size={28} />,
-    color: "#ec4899", // Pink
+    color: "#ec4899", 
   },
   {
     title: "Instant Export",
     desc: "Your Ultra-HD PDF is ready for download in a single click.",
     icon: <FileCheck size={28} />,
-    color: "#3b82f6", // Blue
+    color: "#3b82f6", 
   },
 ];
 
@@ -30,7 +30,6 @@ const HowItWorks = () => {
     <section className="py-32 bg-[#0c070f] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative">
         
-        {/* Section Header */}
         <div className="text-center mb-24">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -44,15 +43,13 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* The Steps Container */}
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
           
-          {/* THE PREMIUM LINE (Desktop Only) */}
           <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 z-0">
-            {/* Background Path (Dotted) */}
+           
             <div className="absolute inset-0 border-t-2 border-dashed border-white/10" />
             
-            {/* Animated Glowing Path */}
+            
             <motion.div 
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
@@ -70,7 +67,6 @@ const HowItWorks = () => {
               transition={{ delay: index * 0.3 }}
               className="group relative z-10 flex flex-col items-center text-center"
             >
-              {/* Icon Container with Floating Animation */}
               <motion.div 
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 className="w-24 h-24 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-white/5 border border-white/10 flex items-center justify-center mb-8 relative group-hover:border-purple-500/50 group-hover:bg-white/10 transition-all duration-500 shadow-2xl"
@@ -78,8 +74,7 @@ const HowItWorks = () => {
                 <div className="text-white group-hover:text-purple-400 transition-colors">
                   {step.icon}
                 </div>
-                
-                {/* Number Overlay */}
+
                 <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-[#0c070f] border border-white/10 rounded-full flex items-center justify-center text-xs font-black text-purple-500 group-hover:border-purple-500">
                   0{index + 1}
                 </div>
@@ -96,7 +91,6 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Extra Premium Detail: Bottom Glow */}
         <div className="mt-24 flex justify-center">
             <motion.div 
               animate={{ opacity: [0.4, 1, 0.4] }}
