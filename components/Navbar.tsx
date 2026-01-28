@@ -9,7 +9,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
 
-  // Optimized Scroll animations with will-change for performance
   const width = useTransform(scrollY, [0, 100], ["100%", "92%"]);
   const maxWidth = useTransform(scrollY, [0, 100], ["1280px", "1100px"]);
   const height = useTransform(scrollY, [0, 100], ["80px", "68px"]);
@@ -46,13 +45,13 @@ const Navbar = () => {
             y, 
             backgroundColor, 
             backdropFilter: "blur(20px)",
-            willChange: "transform, width, height" // Optimization
+            willChange: "transform, width, height" 
           }}
           className="pointer-events-auto mt-4 flex items-center justify-between px-6 md:px-10 
                      border border-white/10 rounded-[28px] 
                      shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-shadow duration-300"
         >
-          {/* Logo */}
+          
           <Link href="/" className="flex items-center gap-2.5 group relative z-110">
             <motion.div 
               whileHover={{ rotate: 10, scale: 1.1 }}
@@ -66,7 +65,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-1 bg-white/5 p-1.5 rounded-full border border-white/10">
             {links.map((link) => (
               <Link
@@ -81,7 +79,6 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Actions */}
           <div className="flex items-center gap-3 md:gap-6">
             <Link
               href="/about"
@@ -90,7 +87,6 @@ const Navbar = () => {
               About
             </Link>
 
-            {/* Premium Hamburger Toggle (Animates to X) */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="relative z-110 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none xl:hidden"
@@ -113,7 +109,6 @@ const Navbar = () => {
         </motion.header>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
