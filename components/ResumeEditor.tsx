@@ -16,7 +16,7 @@ interface Experience { id: string; company: string; role: string; years: string;
 interface Education { id: string; school: string; degree: string; years: string; }
 
 const ResumeBuilder = () => {
-  // --- HYDRATION FIX ---
+  
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
