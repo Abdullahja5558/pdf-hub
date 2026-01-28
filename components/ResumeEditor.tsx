@@ -11,12 +11,11 @@ import Header from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ResumeHowItWorks from "@/components/ResumeHowItWorks";
 
-// --- Types ---
 interface Experience { id: string; company: string; role: string; years: string; }
 interface Education { id: string; school: string; degree: string; years: string; }
 
 const ResumeBuilder = () => {
-  
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
