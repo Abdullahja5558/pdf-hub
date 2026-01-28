@@ -25,58 +25,100 @@ const Hero = () => {
       const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
       const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
       
-      let page = pdfDoc.addPage([595.28, 841.89]);
+      const setupPage = (doc: PDFDocument) => {
+        const p = doc.addPage([595.28, 841.89]);
+        const { width, height } = p.getSize();
+        
+        // --- Executive Frame ---
+        p.drawLine({
+          start: { x: 50, y: height - 40 },
+          end: { x: width - 50, y: height - 40 },
+          thickness: 0.5,
+          color: rgb(0.8, 0.8, 0.8),
+        });
+        
+        return p;
+      };
+
+      let page = setupPage(pdfDoc);
       const { width, height } = page.getSize();
-      let currentY = height - 60;
-      const margin = 55;
+      let currentY = height - 100;
+      const margin = 75; // Luxurious wide margins
+      const maxWidth = width - (margin * 2);
 
       const lines = text.split('\n').filter(l => l.trim() !== "");
+      const dateString = new Date().toLocaleDateString('en-US', { 
+        year: 'numeric', month: 'long', day: 'numeric' 
+      });
 
       lines.forEach((line, index) => {
         const safeLine = cleanText(line.trim());
         if (!safeLine) return;
 
-        // --- Logic: Premium Styling ---
         const isMainTitle = index === 0;
-        const isSubHeading = safeLine.length < 50 && !safeLine.endsWith('.') && !safeLine.includes(':') && !safeLine.startsWith('*');
-        const isBullet = safeLine.startsWith('*') || safeLine.startsWith('-');
+        const isBullet = safeLine.startsWith('*') || safeLine.startsWith('-') || safeLine.startsWith('•');
+        const isSubHeading = !isBullet && (safeLine.length < 50 && (safeLine.endsWith(':') || !safeLine.endsWith('.')));
+
+        if (currentY < 120) {
+          page = setupPage(pdfDoc);
+          currentY = height - 100;
+        }
 
         if (isMainTitle) {
-          currentY -= 20;
-          page.drawText(safeLine.toUpperCase(), {
-            x: margin, y: currentY, size: 26, font: boldFont, color: rgb(0.1, 0.1, 0.1)
+          // Date Stamp (Top Right)
+          page.drawText(dateString, {
+            x: width - margin - 80, y: height - 60, size: 8, font: font, color: rgb(0.5, 0.5, 0.5)
           });
-          currentY -= 35;
+
+          // Main Title - Spaced and Bold
+          page.drawText(safeLine.toUpperCase(), {
+            x: margin, y: currentY, size: 22, font: boldFont, color: rgb(0, 0, 0),
+          });
+          currentY -= 15;
+          page.drawRectangle({ x: margin, y: currentY, width: 30, height: 2, color: rgb(0, 0, 0) });
+          currentY -= 50;
         } 
         else if (isSubHeading) {
-          currentY -= 25;
+          currentY -= 15;
           page.drawText(safeLine, {
-            x: margin, y: currentY, size: 15, font: boldFont, color: rgb(0.48, 0.22, 0.93)
+            x: margin, y: currentY, size: 12, font: boldFont, color: rgb(0.1, 0.1, 0.1)
           });
-          currentY -= 20;
+          currentY -= 22;
         } 
         else if (isBullet) {
-          currentY -= 18;
-          // Clean dot instead of underline
-          page.drawCircle({ x: margin + 5, y: currentY + 3.5, size: 2.5, color: rgb(0.48, 0.22, 0.93) });
-          page.drawText(safeLine.replace(/^[*-]\s*/, ''), {
-            x: margin + 20, y: currentY, size: 11, font: font, color: rgb(0.2, 0.2, 0.2), maxWidth: 460
+          const bulletContent = safeLine.replace(/^[*-•]\s*/, '');
+          // Minimalist Square Bullet
+          page.drawRectangle({ x: margin + 2, y: currentY + 4, width: 3, height: 3, color: rgb(0.4, 0.4, 0.4) });
+          
+          page.drawText(bulletContent, {
+            x: margin + 20, y: currentY, size: 10, font: font, color: rgb(0.2, 0.2, 0.2), 
+            maxWidth: maxWidth - 20, lineHeight: 16
           });
-          currentY -= 5;
+          const lc = Math.ceil(bulletContent.length / 85);
+          currentY -= (lc * 16) + 12;
         } 
         else {
-          currentY -= 20;
           page.drawText(safeLine, {
-            x: margin, y: currentY, size: 11, font: font, color: rgb(0.3, 0.3, 0.3), maxWidth: 480, lineHeight: 15
+            x: margin, y: currentY, size: 10, font: font, color: rgb(0.3, 0.3, 0.3), 
+            maxWidth: maxWidth, lineHeight: 17
           });
-          currentY -= 10;
+          const lc = Math.ceil(safeLine.length / 95);
+          currentY -= (lc * 17) + 15;
         }
+      });
 
-        // Auto Page Break
-        if (currentY < 70) {
-          page = pdfDoc.addPage([595.28, 841.89]);
-          currentY = height - 60;
-        }
+      // Finalize Footer for all pages
+      const pages = pdfDoc.getPages();
+      pages.forEach((p, i) => {
+        p.drawLine({
+          start: { x: 50, y: 50 },
+          end: { x: width - 50, y: 50 },
+          thickness: 0.5,
+          color: rgb(0.8, 0.8, 0.8),
+        });
+        p.drawText(`OFFICIAL DOCUMENT  |  PAGE ${i + 1}`, {
+          x: margin, y: 35, size: 7, font: font, color: rgb(0.6, 0.6, 0.6)
+        });
       });
 
       const pdfBytes = await pdfDoc.save();
@@ -84,7 +126,7 @@ const Hero = () => {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Ultra_Document.pdf";
+      link.download = "Executive_Ultra_Document.pdf";
       link.click();
       URL.revokeObjectURL(url);
     } catch (err) {
@@ -120,7 +162,7 @@ const Hero = () => {
             <textarea 
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="First line is Title. Short lines become purple headings. Use * for points."
+              placeholder="First line is Title. Short lines are Headings. Use * for Bullets."
               className="w-full h-48 bg-black/40 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all resize-none text-left"
             />
             
@@ -135,8 +177,8 @@ const Hero = () => {
         </motion.div>
 
         <p className="text-gray-400 text-lg mb-12 max-w-2xl">
-          Experience the next generation of PDF creation. High-resolution typography, 
-          automatic formatting, and instant downloads.
+          High-resolution Executive Typography. Automatic formatting with frame borders 
+          and pagination.
         </p>
         
         <div className="flex flex-wrap justify-center gap-12 py-8 border-t border-white/10 w-full opacity-50">
