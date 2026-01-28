@@ -90,7 +90,6 @@ const ResumeBuilder = () => {
         currentY -= 25;
       });
 
-      // Education Section
       currentY -= 10;
       page.drawText("EDUCATION", { x: 50, y: currentY, size: 12, font: boldFont, color: rgb(0.5, 0.3, 0.9) });
       currentY -= 20;
@@ -104,7 +103,6 @@ const ResumeBuilder = () => {
       });
 
       const pdfBytes = await pdfDoc.save();
-      // FIX: Explicitly cast to Uint8Array for the Blob constructor
       const blob = new Blob([pdfBytes as any], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -112,14 +110,11 @@ const ResumeBuilder = () => {
       link.download = `${name.replace(/\s+/g, '_')}_Resume.pdf`;
       link.click();
       
-      // Clean up the URL object
       setTimeout(() => URL.revokeObjectURL(url), 100);
     } catch (error) {
       console.error("PDF Generation failed:", error);
     }
   };
-
-  // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) return <div className="min-h-screen bg-[#0c070f]" />;
 
   return (
@@ -128,14 +123,12 @@ const ResumeBuilder = () => {
       <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10">
           
-          {/* LEFT: FORM SIDE */}
           <div className="flex-1 space-y-8 max-h-[85vh] overflow-y-auto pr-4 custom-scrollbar">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-purple-500/20 rounded-lg text-purple-400"><Sparkles size={24} /></div>
               <h1 className="text-3xl font-black tracking-tight">Resume <span className="text-purple-500">Architect</span></h1>
             </div>
 
-            {/* Section 1: Personal Info */}
             <div className="p-8 rounded-4xl bg-white/5 border border-white/10 space-y-6">
               <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400"><User size={18} /> Basic Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -152,14 +145,11 @@ const ResumeBuilder = () => {
                 />
               </div>
             </div>
-
-            {/* Section 2: Skills */}
             <div className="p-8 rounded-4xl bg-white/5 border border-white/10 space-y-6">
               <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400"><Code size={18} /> Core Competencies</h3>
               <InputField label="Skills (Comma separated)" value={skills} onChange={setSkills} />
             </div>
 
-            {/* Section 3: Experience */}
             <DynamicSection 
               title="Experience" icon={<Briefcase size={18}/>} 
               items={experiences} onAdd={addExperience} onRemove={removeExperience}
@@ -172,7 +162,6 @@ const ResumeBuilder = () => {
               )}
             />
 
-            {/* Section 4: Education */}
             <DynamicSection 
               title="Education" icon={<GraduationCap size={18}/>} 
               items={education} onAdd={addEducation} onRemove={removeEducation}
@@ -190,7 +179,6 @@ const ResumeBuilder = () => {
             </button>
           </div>
 
-          {/* RIGHT: LIVE PREVIEW */}
           <div className="lg:w-112.5 sticky top-32 h-fit">
             <div className="mb-4 flex justify-between px-4"><span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest flex items-center gap-2"><Eye size={14}/> Live Blueprint</span></div>
             <div className="bg-white text-black aspect-[1/1.414] rounded-xl shadow-2xl p-8 overflow-y-auto text-[9px] scale-100 origin-top">
@@ -240,8 +228,6 @@ const ResumeBuilder = () => {
     </main>
   );
 };
-
-// --- Helper UI Components ---
 const InputField = ({ label, value, onChange }: any) => (
   <div className="space-y-1">
     <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{label}</label>
