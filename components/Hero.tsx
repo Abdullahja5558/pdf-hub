@@ -43,7 +43,7 @@ const Hero = () => {
       let page = setupPage(pdfDoc);
       const { width, height } = page.getSize();
       let currentY = height - 100;
-      const margin = 75; // Luxurious wide margins
+      const margin = 75; 
       const maxWidth = width - (margin * 2);
 
       const lines = text.split('\n').filter(l => l.trim() !== "");
@@ -65,12 +65,12 @@ const Hero = () => {
         }
 
         if (isMainTitle) {
-          // Date Stamp (Top Right)
+          
           page.drawText(dateString, {
             x: width - margin - 80, y: height - 60, size: 8, font: font, color: rgb(0.5, 0.5, 0.5)
           });
 
-          // Main Title - Spaced and Bold
+        
           page.drawText(safeLine.toUpperCase(), {
             x: margin, y: currentY, size: 22, font: boldFont, color: rgb(0, 0, 0),
           });
@@ -87,8 +87,7 @@ const Hero = () => {
         } 
         else if (isBullet) {
           const bulletContent = safeLine.replace(/^[*-•]\s*/, '');
-          // Minimalist Square Bullet
-          page.drawRectangle({ x: margin + 2, y: currentY + 4, width: 3, height: 3, color: rgb(0.4, 0.4, 0.4) });
+           page.drawRectangle({ x: margin + 2, y: currentY + 4, width: 3, height: 3, color: rgb(0.4, 0.4, 0.4) });
           
           page.drawText(bulletContent, {
             x: margin + 20, y: currentY, size: 10, font: font, color: rgb(0.2, 0.2, 0.2), 
@@ -107,7 +106,7 @@ const Hero = () => {
         }
       });
 
-      // Finalize Footer for all pages
+  
       const pages = pdfDoc.getPages();
       pages.forEach((p, i) => {
         p.drawLine({
