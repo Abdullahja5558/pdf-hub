@@ -23,7 +23,6 @@ const ResumeBuilder = () => {
     setMounted(true);
   }, []);
 
-  // State Management
   const [name, setName] = useState("John Doe");
   const [email, setEmail] = useState("john@example.com");
   const [phone, setPhone] = useState("+1 234 567 890");
