@@ -15,19 +15,19 @@ const steps = [
     title: "Organize Flow",
     desc: "Arrange your documents in the exact order you want. Simply drag and drop to set the hierarchy.",
     icon: <LayoutPanelLeft size={24} />,
-    color: "#3b82f6", // Blue
+    color: "#3b82f6", 
   },
   {
     title: "Smart Binding",
     desc: "Our engine cleans metadata and unifies the vector layers to ensure a seamless transition between files.",
     icon: <Wand2 size={24} />,
-    color: "#ec4899", // Pink
+    color: "#ec4899", 
   },
   {
     title: "Secure Export",
     desc: "Download your unified document. Files are automatically purged from memory after processing.",
     icon: <ShieldCheck size={24} />,
-    color: "#10b981", // Green
+    color: "#10b981", 
   },
 ];
 
@@ -37,15 +37,12 @@ const MergeHowItWorks = () => {
     target: containerRef,
     offset: ["start center", "end center"],
   });
-
-  // Animated line progress
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <section ref={containerRef} className="py-32 bg-[#0c070f] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative">
         
-        {/* Header */}
         <div className="text-center mb-28">
           <motion.span 
             initial={{ opacity: 0 }}
@@ -62,7 +59,6 @@ const MergeHowItWorks = () => {
         {/* Steps Container */}
         <div className="relative">
           
-          {/* THE GLOWING VERTICAL LINE (Center) */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2">
             <motion.div 
               style={{ scaleY, originY: 0 }}
@@ -82,7 +78,6 @@ const MergeHowItWorks = () => {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex-row`}
               >
-                {/* Glassmorphic Card */}
                 <div className="w-full md:w-[40%] ml-20 md:ml-0">
                   <div className="group relative p-8 rounded-[40px] bg-white/3 border border-white/10 backdrop-blur-md hover:bg-white/5 hover:border-purple-500/40 transition-all duration-500">
                     <div className="absolute -top-4 -left-4 text-4xl font-black text-white/5 group-hover:text-purple-500/10 transition-colors">
@@ -102,8 +97,6 @@ const MergeHowItWorks = () => {
                    <div className="text-white relative z-10 group-hover:scale-110 transition-transform">
                      {step.icon}
                    </div>
-                   
-                   {/* Background Glow Pulse */}
                    <motion.div 
                      animate={{ 
                        scale: [1, 1.2, 1],
@@ -114,7 +107,7 @@ const MergeHowItWorks = () => {
                    />
                 </div>
 
-                {/* Empty Space for balancing grid */}
+                
                 <div className="hidden md:block w-[40%]" />
               </motion.div>
             ))}
