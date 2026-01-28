@@ -67,7 +67,6 @@ const Features = () => {
           </motion.h2>
         </div>
 
-        {/* The Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((item, index) => (
             <motion.div
@@ -79,7 +78,7 @@ const Features = () => {
               whileHover={{ y: -5 }}
               className="group relative p-8 rounded-4xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 overflow-hidden"
             >
-              {/* Gradient background effect on hover */}
+          
               <div className={`absolute inset-0 bg-linear-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
               
               <div className="relative z-10">
