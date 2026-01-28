@@ -38,16 +38,14 @@ const ResumeBuilder = () => {
     { id: "1", school: "Stanford University", degree: "B.S. Computer Science", years: "2017 - 2021" }
   ]);
 
-  // Handlers
   const addExperience = () => setExperiences([...experiences, { id: Date.now().toString(), company: "", role: "", years: "" }]);
   const removeExperience = (id: string) => setExperiences(experiences.filter(exp => exp.id !== id));
   
   const addEducation = () => setEducation([...education, { id: Date.now().toString(), school: "", degree: "", years: "" }]);
   const removeEducation = (id: string) => setEducation(education.filter(ed => ed.id !== id));
 
-  // --- PDF Generation Logic ---
   const generateResume = async () => {
-    // Check for browser environment
+  
     if (typeof window === "undefined") return;
 
     try {
@@ -57,28 +55,23 @@ const ResumeBuilder = () => {
       const page = pdfDoc.addPage([595.28, 841.89]);
       const { width, height } = page.getSize();
 
-      // Header Color Block
       page.drawRectangle({ x: 0, y: height - 100, width, height: 100, color: rgb(0.047, 0.027, 0.059) });
 
-      // Header Content
       page.drawText(name.toUpperCase(), { x: 50, y: height - 50, size: 24, font: boldFont, color: rgb(1, 1, 1) });
       page.drawText(`${email} | ${phone} | ${address}`, { x: 50, y: height - 70, size: 10, font, color: rgb(0.8, 0.8, 0.8) });
 
       let currentY = height - 130;
 
-      // Summary Section
       page.drawText("PROFESSIONAL SUMMARY", { x: 50, y: currentY, size: 12, font: boldFont, color: rgb(0.5, 0.3, 0.9) });
       currentY -= 15;
       page.drawText(summary, { x: 50, y: currentY, size: 10, font, maxWidth: 500, lineHeight: 14 });
       currentY -= 45;
 
-      // Skills Section
       page.drawText("CORE SKILLS", { x: 50, y: currentY, size: 12, font: boldFont, color: rgb(0.5, 0.3, 0.9) });
       currentY -= 15;
       page.drawText(skills, { x: 50, y: currentY, size: 10, font, maxWidth: 500 });
       currentY -= 40;
 
-      // Experience Section
       page.drawText("PROFESSIONAL EXPERIENCE", { x: 50, y: currentY, size: 12, font: boldFont, color: rgb(0.5, 0.3, 0.9) });
       currentY -= 20;
       experiences.forEach(exp => {
