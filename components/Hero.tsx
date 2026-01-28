@@ -29,7 +29,7 @@ const Hero = () => {
         const p = doc.addPage([595.28, 841.89]);
         const { width, height } = p.getSize();
         
-        // --- Executive Frame ---
+      
         p.drawLine({
           start: { x: 50, y: height - 40 },
           end: { x: width - 50, y: height - 40 },
