@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     "PDF Modification",
     "Digital Documents",
   
+    "Cloud PDF Tools",
+  
+  
   ],
   authors: [{ name: "PDFHub" }],
   openGraph: {
