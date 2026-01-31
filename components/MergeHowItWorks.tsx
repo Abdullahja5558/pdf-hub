@@ -91,7 +91,7 @@ const MergeHowItWorks = () => {
                   </div>
                 </div>
 
-                {/* Center Animated Node */}
+              
                 <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl bg-[#0c070f] border border-white/10 flex items-center justify-center z-10">
                    <div className="text-white relative z-10 group-hover:scale-110 transition-transform">
                      {step.icon}
