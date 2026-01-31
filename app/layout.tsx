@@ -48,6 +48,11 @@ export const metadata: Metadata = {
     "Cloud PDF Tools",
     "PDF Software",
     "PDF Utility",
+    "PDF Generation",
+    "PDF Handling",
+    "PDF Optimization",
+    "PDF Workflow",
+    "PDF Technology",
   ],
   authors: [{ name: "PDFHub" }],
   openGraph: {
