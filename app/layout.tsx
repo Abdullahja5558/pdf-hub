@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "Digital Documents",
   
     "Cloud PDF Tools",
-  
+    "PDF Software",
   
   ],
   authors: [{ name: "PDFHub" }],
