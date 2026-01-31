@@ -35,7 +35,6 @@ const AboutPage = () => {
       </motion.button>
       </div>
 
-      {/* Hero Section */}
       <section className=" pb-20 px-6">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-150 bg-purple-600/10 blur-[130px] rounded-full opacity-40 pointer-events-none" />
         
