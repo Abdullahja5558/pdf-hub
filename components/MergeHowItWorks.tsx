@@ -56,7 +56,6 @@ const MergeHowItWorks = () => {
           </h2>
         </div>
 
-        {/* Steps Container */}
         <div className="relative">
           
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2">
