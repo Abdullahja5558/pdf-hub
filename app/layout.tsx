@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     "PDF Tools",
     "Online PDF Services",
     "Document Management",
+    "PDF Compression",
     
   ],
   authors: [{ name: "PDFHub" }],
