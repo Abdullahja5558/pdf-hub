@@ -9,7 +9,7 @@ const steps = [
     title: "Upload Stack",
     desc: "Select two or more PDF files. Our system securely prepares them for structural merging in real-time.",
     icon: <FileStack size={24} />,
-    color: "#a855f7", // Purple
+    color: "#a855f7", 
   },
   {
     title: "Organize Flow",
