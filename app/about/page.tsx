@@ -21,7 +21,7 @@ const AboutPage = () => {
     <main className="bg-[#0c070f] min-h-screen text-white overflow-hidden">
       
 
-      {/* --- PREMIUM BACK BUTTON --- */}
+     
       <div className="pt-10">
       <motion.button
         initial={{ opacity: 0, x: -20 }}
