@@ -88,7 +88,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-40 px-6 relative">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
            <div className="relative">
