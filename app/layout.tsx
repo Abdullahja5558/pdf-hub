@@ -40,6 +40,8 @@ export const metadata: Metadata = {
     "PDF Splitter",
     "PDF Tools",
     "Online PDF Services",
+    "Document Management",
+    
   ],
   authors: [{ name: "PDFHub" }],
   openGraph: {
