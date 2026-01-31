@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Online PDF Services",
     "Document Management",
     "PDF Compression",
-    
+    "PDF Creation",
   ],
   authors: [{ name: "PDFHub" }],
   openGraph: {
