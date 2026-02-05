@@ -249,7 +249,7 @@ const ResumeBuilder = () => {
                     </section>
                   )}
                   {premiumNote && (
-                    <div className="mt-8 p-4 bg-purple-50 rounded-lg border-l-[4px] border-purple-600 text-gray-700">
+                    <div className="mt-8 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-600 text-gray-700">
                       <span className="font-black text-purple-700 block mb-1 uppercase text-[9px]">Note</span>
                       {premiumNote}
                     </div>
