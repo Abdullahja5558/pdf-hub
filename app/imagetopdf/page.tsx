@@ -33,7 +33,7 @@ export default function ImageToPdfPage() {
   const removeImage = (id: string) => {
     setImages((prev) => {
       const filtered = prev.filter((img) => img.id !== id);
-      // Clean up memory
+  
       const removed = prev.find(img => img.id === id);
       if (removed) URL.revokeObjectURL(removed.preview);
       return filtered;
