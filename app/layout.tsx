@@ -72,7 +72,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressContentEditableWarning={true}
-    suppressHydrationWarning={true}>
+    suppressHydrationWarning={true}
+    style ={{ scrollBehavior: "smooth" }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
