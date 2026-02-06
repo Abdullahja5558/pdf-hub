@@ -104,7 +104,6 @@ const PDFMergeSplit = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           
-          {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-black mb-6">
               Manage Your <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">Structure</span>
