@@ -75,7 +75,7 @@ export default function ImageToPdfPage() {
 
   return (
     <main className="bg-[#0c070f] min-h-screen text-white">
-      {/* 1. Header is included here */}
+    
       <Navbar />
 
       <section className="pt-32 pb-20 px-6">
