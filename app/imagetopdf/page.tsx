@@ -97,7 +97,6 @@ export default function ImageToPdfPage() {
             </p>
           </div>
 
-          {/* 2. Drag & Drop Zone */}
           <motion.div 
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
