@@ -123,7 +123,6 @@ export default function ImageToPdfPage() {
             </div>
           </motion.div>
 
-          {/* 3. Image Grid / Preview */}
           <AnimatePresence>
             {images.length > 0 && (
               <motion.div 
