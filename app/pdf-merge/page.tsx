@@ -48,7 +48,6 @@ const PDFMergeSplit = () => {
     setFiles((prev) => prev.filter((f) => f.id !== id));
   };
 
-  // --- CORE LOGIC: MERGE PDFs ---
   const mergePDFs = async () => {
     if (files.length < 2) return alert("Please upload at least 2 PDFs to merge.");
     setIsProcessing(true);
