@@ -175,7 +175,6 @@ const PDFMergeSplit = () => {
                   </motion.div>
                 ))}
 
-                {/* Processing Button */}
                 <div className="pt-10 flex justify-center">
                   <button
                     onClick={mode === "merge" ? mergePDFs : splitPDF}
