@@ -128,7 +128,6 @@ const PDFMergeSplit = () => {
             </div>
           </div>
 
-          {/* Upload Area */}
           <motion.div 
             whileHover={{ scale: 1.005 }}
             onClick={() => fileInputRef.current?.click()}
