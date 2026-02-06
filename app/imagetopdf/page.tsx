@@ -81,7 +81,6 @@ export default function ImageToPdfPage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-5xl mx-auto">
           
-          {/* Section Heading */}
           <div className="text-center mb-12">
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
