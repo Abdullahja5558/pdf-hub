@@ -72,7 +72,7 @@ const PDFMergeSplit = () => {
     if (files.length === 0) return;
     setIsProcessing(true);
     try {
-      const fileObj = files[0]; // Take the first file to split
+      const fileObj = files[0]; 
       const arrayBuffer = await fileObj.file.arrayBuffer();
       const pdf = await PDFDocument.load(arrayBuffer);
       
