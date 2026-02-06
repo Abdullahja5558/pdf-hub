@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-// Ye line error ko khatam kar degi
+
 const ResumeEditor = dynamic(
   () => import('@/components/ResumeEditor'), 
   { 
