@@ -109,7 +109,7 @@ const PDFMergeSplit = () => {
               Manage Your <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">Structure</span>
             </h1>
             
-            {/* Mode Switcher */}
+            
             <div className="flex justify-center mt-8">
               <div className="bg-white/5 p-1 rounded-2xl border border-white/10 flex items-center">
                 <button 
