@@ -68,7 +68,6 @@ const PDFMergeSplit = () => {
     }
   };
 
-  // --- CORE LOGIC: SPLIT PDF (Saves first page as example, or all pages) ---
   const splitPDF = async () => {
     if (files.length === 0) return;
     setIsProcessing(true);
