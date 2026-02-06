@@ -141,7 +141,6 @@ const PDFMergeSplit = () => {
             <p className="text-gray-500 text-sm">Select multiple files to combine or one to divide.</p>
           </motion.div>
 
-          {/* File List */}
           <AnimatePresence>
             {files.length > 0 && (
               <motion.div 
