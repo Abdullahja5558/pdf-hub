@@ -76,7 +76,6 @@ const PDFMergeSplit = () => {
       const arrayBuffer = await fileObj.file.arrayBuffer();
       const pdf = await PDFDocument.load(arrayBuffer);
       
-      // Split into individual pages (Download first page for demo)
       const newPdf = await PDFDocument.create();
       const [firstPage] = await newPdf.copyPages(pdf, [0]);
       newPdf.addPage(firstPage);
