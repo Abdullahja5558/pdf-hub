@@ -162,8 +162,6 @@ export default function ImageToPdfPage() {
                     </motion.div>
                   ))}
                 </div>
-
-                {/* 4. The Action Button */}
                 <div className="mt-10 pt-8 border-t border-white/10 flex justify-center">
                   <button
                     onClick={generatePdf}
