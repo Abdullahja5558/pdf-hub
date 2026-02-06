@@ -204,8 +204,6 @@ const ResumeBuilder = () => {
               <Download size={28} /> Export Premium PDF
             </button>
           </div>
-
-          {/* PREVIEW - High Resolution Rendering */}
           <div className="lg:w-112.5 sticky top-32 h-fit hidden lg:block">
             <div className="bg-white text-black min-h-212.5 rounded-xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] p-10 overflow-y-auto antialiased">
                <div className="border-b-[6px] border-purple-600 pb-4 mb-6">
