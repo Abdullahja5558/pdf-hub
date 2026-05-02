@@ -251,7 +251,7 @@ const ResumeBuilder = () => {
           </div>
 
           {/* LIVE PREVIEW SIDE (UPDATED) */}
-          <div className="lg:w-[480px] sticky top-24 h-fit hidden lg:block">
+          <div className="lg:w-120 sticky top-24 h-fit hidden lg:block">
             <div className="bg-white text-black min-h-[700px] rounded-2xl shadow-2xl p-8 overflow-hidden">
                {/* Header Preview */}
                <div className="border-b-[4px] border-purple-600 pb-4 mb-5">
