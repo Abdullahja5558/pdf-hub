@@ -35,7 +35,7 @@ const ResumeBuilder = () => {
   const [summary, setSummary] = useState("Creative developer specializing in premium MERN stack applications.");
   const [skillGroups, setSkillGroups] = useState<SkillGroup[]>([{ id: "1", title: "Frontend", list: "Next.js 15, React, Tailwind, Framer Motion" }]);
   const [experiences, setExperiences] = useState<Experience[]>([{ id: "1", company: "Tech Solutions", role: "Frontend Lead", years: "2023 - Present" }]);
-  const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Your project name", description: "Describe your project here.", tools: "Your tools", link: "lexpro.ai" }]);
+  const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Your project name", description: "Describe your project here.", tools: "Your tools", link: "your link" }]);
   const [education, setEducation] = useState<Education[]>([{ id: "1", school: "University of Engineering", degree: "BS Computer Science", years: "2022 - 2026" }]);
   const [languages, setLanguages] = useState<Language[]>([{ id: "1", name: "English", level: "Professional" }]);
   const [premiumNote, setPremiumNote] = useState("Ready for high-end web development challenges.");
