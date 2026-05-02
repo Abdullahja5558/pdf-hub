@@ -34,7 +34,7 @@ const ResumeBuilder = () => {
   // Dynamic Content State
   const [summary, setSummary] = useState("Your summary goes here. Highlight your professional background, key skills, and career aspirations in a concise paragraph.");
   const [skillGroups, setSkillGroups] = useState<SkillGroup[]>([{ id: "1", title: "Your Skill Group", list: "Your skills" }]);
-  const [experiences, setExperiences] = useState<Experience[]>([{ id: "1", company: "Tech Solutions", role: "Frontend Lead", years: "2023 - Present" }]);
+  const [experiences, setExperiences] = useState<Experience[]>([{ id: "1", company: "Tech Solutions", role: "Your role", years: "2023 - Present" }]);
   const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Your project name", description: "Describe your project here.", tools: "Your tools", link: "your link" }]);
   const [education, setEducation] = useState<Education[]>([{ id: "1", school: "University of Engineering", degree: "BS Computer Science", years: "2022 - 2026" }]);
   const [languages, setLanguages] = useState<Language[]>([{ id: "1", name: "English", level: "Professional" }]);
