@@ -254,7 +254,7 @@ const ResumeBuilder = () => {
           <div className="lg:w-120 sticky top-24 h-fit hidden lg:block">
             <div className="bg-white text-black min-h-175 rounded-2xl shadow-2xl p-8 overflow-hidden">
                {/* Header Preview */}
-               <div className="border-b-[4px] border-purple-600 pb-4 mb-5">
+               <div className="border-b-4 border-purple-600 pb-4 mb-5">
                   <h2 className="text-2xl font-black uppercase text-gray-900">{name || "YOUR NAME"}</h2>
                   <p className="text-purple-600 font-bold text-xs mb-3">{role || "Your Profession"}</p>
                   <div className="grid grid-cols-2 gap-1 text-[9px] text-gray-500 font-bold uppercase">
