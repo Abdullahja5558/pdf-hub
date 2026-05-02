@@ -252,7 +252,7 @@ const ResumeBuilder = () => {
 
           {/* LIVE PREVIEW SIDE (UPDATED) */}
           <div className="lg:w-120 sticky top-24 h-fit hidden lg:block">
-            <div className="bg-white text-black min-h-[700px] rounded-2xl shadow-2xl p-8 overflow-hidden">
+            <div className="bg-white text-black min-h-175 rounded-2xl shadow-2xl p-8 overflow-hidden">
                {/* Header Preview */}
                <div className="border-b-[4px] border-purple-600 pb-4 mb-5">
                   <h2 className="text-2xl font-black uppercase text-gray-900">{name || "YOUR NAME"}</h2>
