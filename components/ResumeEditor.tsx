@@ -38,7 +38,7 @@ const ResumeBuilder = () => {
   const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Your project name", description: "Describe your project here.", tools: "Your tools", link: "your link" }]);
   const [education, setEducation] = useState<Education[]>([{ id: "1", school: "University of Engineering", degree: "BS Computer Science", years: "2022 - 2026" }]);
   const [languages, setLanguages] = useState<Language[]>([{ id: "1", name: "English", level: "Professional" }]);
-  const [premiumNote, setPremiumNote] = useState("Ready for high-end web development challenges.");
+  const [premiumNote, setPremiumNote] = useState("Ready for remote job opportunities. Open to relocation.");
 
   // Helper for PDF text wrapping
   const wrapText = (text: string, maxWidth: number, font: any, fontSize: number) => {
