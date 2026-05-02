@@ -22,20 +22,20 @@ const ResumeBuilder = () => {
   useEffect(() => { setMounted(true); }, []);
 
   // Basic Info State
-  const [name, setName] = useState("ABDULLAH JAVED");
-  const [role, setRole] = useState("Senior Full-Stack Developer");
-  const [email, setEmail] = useState("abdullah@example.com");
+  const [name, setName] = useState("John Doe");
+  const [role, setRole] = useState("Write your feild");
+  const [email, setEmail] = useState("john.doe@example.com");
   const [phone, setPhone] = useState("+92 300 1234567");
   const [address, setAddress] = useState("Lahore, Pakistan");
-  const [github, setGithub] = useState("github.com/abdullahjaved");
-  const [linkedin, setLinkedin] = useState("linkedin.com/in/abdullahjaved");
-  const [portfolio, setPortfolio] = useState("abdullah.dev");
+  const [github, setGithub] = useState("github.com/johndoe");
+  const [linkedin, setLinkedin] = useState("linkedin.com/in/johndoe");
+  const [portfolio, setPortfolio] = useState("johndoe.dev");
 
   // Dynamic Content State
   const [summary, setSummary] = useState("Creative developer specializing in premium MERN stack applications.");
   const [skillGroups, setSkillGroups] = useState<SkillGroup[]>([{ id: "1", title: "Frontend", list: "Next.js 15, React, Tailwind, Framer Motion" }]);
   const [experiences, setExperiences] = useState<Experience[]>([{ id: "1", company: "Tech Solutions", role: "Frontend Lead", years: "2023 - Present" }]);
-  const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Lex Pro AI", description: "Legal AI assistant.", tools: "Next.js, OpenAI", link: "lexpro.ai" }]);
+  const [projects, setProjects] = useState<Project[]>([{ id: "1", name: "Your project name", description: "Legal AI assistant.", tools: "Next.js, OpenAI", link: "lexpro.ai" }]);
   const [education, setEducation] = useState<Education[]>([{ id: "1", school: "University of Engineering", degree: "BS Computer Science", years: "2022 - 2026" }]);
   const [languages, setLanguages] = useState<Language[]>([{ id: "1", name: "English", level: "Professional" }]);
   const [premiumNote, setPremiumNote] = useState("Ready for high-end web development challenges.");
