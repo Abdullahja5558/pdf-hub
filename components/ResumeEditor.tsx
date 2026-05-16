@@ -29,7 +29,6 @@ const ResumeBuilder = () => {
   const [linkedin, setLinkedin] = useState("linkedin.com/in/johndoe");
   const [portfolio, setPortfolio] = useState("johndoe.dev");
 
-  // Dynamic Content State
   const [summary, setSummary] = useState("Your summary goes here. Highlight your professional background, key skills, and career aspirations in a concise paragraph.");
   const [skillGroups, setSkillGroups] = useState<SkillGroup[]>([{ id: "1", title: "Your Skill Group", list: "Your skills" }]);
   const [experiences, setExperiences] = useState<Experience[]>([{ id: "1", company: "Tech Solutions", role: "Your role", years: "2023 - Present" }]);
