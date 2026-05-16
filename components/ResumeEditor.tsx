@@ -10,7 +10,6 @@ import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 import Header from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// --- Interfaces ---
 interface Experience { id: string; company: string; role: string; years: string; }
 interface Education { id: string; school: string; degree: string; years: string; }
 interface SkillGroup { id: string; title: string; list: string; }
