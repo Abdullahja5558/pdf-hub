@@ -63,7 +63,6 @@ const ResumeBuilder = () => {
       const margin = 50;
       const maxWidth = 495;
       
-      // Dynamic Height Calculation
       let h = 190; 
       h += wrapText(summary, maxWidth, font, 10).length * 15 + 30;
       skillGroups.forEach(sg => h += wrapText(sg.list, maxWidth - 90, font, 10).length * 15 + 10); h += 30;
