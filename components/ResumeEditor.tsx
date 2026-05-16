@@ -255,7 +255,6 @@ const ResumeBuilder = () => {
                   </div>
                </div>
 
-               {/* Live Content Sections */}
                <div className="space-y-5 text-[10px] leading-snug">
                   {summary && (
                     <section>
