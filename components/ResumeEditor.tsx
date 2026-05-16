@@ -76,7 +76,6 @@ const ResumeBuilder = () => {
       const page = pdfDoc.addPage([595.28, finalHeight]);
       const { width } = page.getSize();
 
-      // Header PDF
       page.drawRectangle({ x: 0, y: finalHeight - 130, width, height: 130, color: rgb(0.05, 0.03, 0.07) });
       page.drawText(name.toUpperCase(), { x: 50, y: finalHeight - 50, size: 24, font: boldFont, color: rgb(1, 1, 1) });
       page.drawText(role.toUpperCase(), { x: 50, y: finalHeight - 72, size: 11, font: boldFont, color: rgb(0.5, 0.3, 0.9) });
