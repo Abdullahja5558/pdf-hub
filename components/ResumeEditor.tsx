@@ -162,7 +162,6 @@ const ResumeBuilder = () => {
       <section className="pt-24 px-4 md:px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
           
-          {/* EDITOR SIDE */}
           <div className="flex-1 space-y-6 lg:max-h-[85vh] lg:overflow-y-auto lg:pr-4 custom-scrollbar">
             <div className="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-6">
               <h3 className="text-lg font-bold flex items-center gap-2 text-purple-400"><User size={18} /> Basic Info</h3>
