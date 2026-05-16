@@ -20,7 +20,6 @@ const ResumeBuilder = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
 
-  // Basic Info State
   const [name, setName] = useState("John Doe");
   const [role, setRole] = useState("Write your feild");
   const [email, setEmail] = useState("john.doe@example.com");
