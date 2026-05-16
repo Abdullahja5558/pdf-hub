@@ -243,7 +243,7 @@ const ResumeBuilder = () => {
             <button onClick={generateResume} className="w-full py-5 bg-purple-600 rounded-2xl font-black text-lg shadow-xl hover:bg-purple-500 transition-all">Download PDF</button>
           </div>
 
-          {/* LIVE PREVIEW SIDE (UPDATED) */}
+          
           <div className="lg:w-120 sticky top-24 h-fit hidden lg:block">
             <div className="bg-white text-black min-h-175 rounded-2xl shadow-2xl p-8 overflow-hidden">
                {/* Header Preview */}
