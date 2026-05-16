@@ -37,7 +37,6 @@ const ResumeBuilder = () => {
   const [languages, setLanguages] = useState<Language[]>([{ id: "1", name: "English", level: "Professional" }]);
   const [premiumNote, setPremiumNote] = useState("Ready for remote job opportunities. Open to relocation.");
 
-  // Helper for PDF text wrapping
   const wrapText = (text: string, maxWidth: number, font: any, fontSize: number) => {
     if (!text) return [];
     const words = text.split(' ');
