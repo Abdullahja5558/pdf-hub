@@ -80,7 +80,6 @@ const HowItWorks = () => {
                 </div>
               </motion.div>
 
-              {/* Text Content */}
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-purple-400 group-hover:to-pink-500 transition-all">
                 {step.title}
               </h3>
