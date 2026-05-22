@@ -47,7 +47,7 @@ const ResumeHowItWorks = () => {
 
   return (
     <section ref={containerRef} className="py-32 bg-[#0c070f] relative overflow-hidden">
-      {/* Decorative Background Orbs */}
+     
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full" />
 
